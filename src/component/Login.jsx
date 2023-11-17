@@ -24,7 +24,7 @@ const Login = () => {
                 // console.log(res)
                 if (res.data) {
                     document.cookie = "token=" + res.data.data.token + "; expires=" + Date.now() + 1 * 24 * 60 * 60 * 1000;
-                    window.location.href = 'http://localhost:3000'
+                    window.location.href = 'https://dhun-jam.vercel.app/'
                 } else {
                     alert(res.data.response);
                 }

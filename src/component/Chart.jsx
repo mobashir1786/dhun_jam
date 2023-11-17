@@ -32,7 +32,7 @@ const Chart = () => {
             .then(res => {
                 // console.log(res)
                 if (res) {
-                    window.location.href = 'http://localhost:3000'
+                    window.location.href = 'https://dhun-jam.vercel.app/'
                 } else {
                     alert(res.data.response);
                 }
@@ -75,6 +75,12 @@ const Chart = () => {
                     <div className="bar" style={{ width: "50px", height: "100%", backgroundColor: "#F0C3F1", marginLeft: "5px" }}></div>
                     {
                         quantityValue.map((n) => (<div className="bar" style={{ width: "40px", height: `${n}px`, backgroundColor: "#F0C3F1", marginLeft: "5px" }} key={n}></div>))
+                    }
+                </div>
+                <div className="name">
+                    <div>Custom</div>
+                    {
+                        quantityName.map((n) => (<div>{n}</div>))
                     }
                 </div>
                 <button type='submit' className='loginbtn'>Save</button>
